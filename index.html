@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova - Jogo Héroi e Vilão</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="personagem-container">
+            <div class="personagem">
+                <div class="barra-vida" :style="{width: heroi.vida + '%'}" :class="{ 'vermelha': heroi.vida <= 30 }">{{ heroi.vida }}%</div>
+                <img class="sprite" :src="spriteHeroi">
+                <h1>Cavaleiro da Luz</h1>
+                <div class="acoes">
+                    <button @click="atacar(true)" :disabled="bloquearBotoes">Atacar</button>
+                    <button @click="rolar(true)" :disabled="bloquearBotoes">Rolar</button>
+                    <button @click="curar(true)" :disabled="bloquearBotoes">Curar</button>
+                    <button @click="investida(true)" :disabled="bloquearBotoes">Investida</button>
+                </div>
+            </div>
+            <div class="personagem">
+                <div class="barra-vida" :style="{width: vilao.vida + '%'}" :class="{ 'vermelha': vilao.vida <= 30 }">{{ vilao.vida }}%</div>
+                <img class="spriteVilao" :src="spriteVilao">
+                <h1>Cavaleiro das Trevas</h1>
+            </div>
+        </div>
+        <div class="logBatalha">
+            <h1>LOG DE BATALHA!</h1>
+            <div class="logHeroi">{{logBatalhaHeroi}}</div><br>
+            <div class="logVilao">{{logBatalhaVilao}}</div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="scripts/index.js"></script>

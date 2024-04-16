@@ -1,0 +1,120 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: url(/img/388983.jpg);
+    background-size: cover;
+}
+
+#app {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.acoes, .barra-vida, .personagem h1 {
+    transform: scaleX(-1);
+}
+
+.personagem-container {
+    display: flex;
+    justify-content: space-between;
+    transform: scaleX(-1);
+}
+
+.personagem {
+    background-color: whitesmoke;
+    border: 2px solid #1d509f;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.personagem:first-child {
+    margin-right: 100px;
+}
+
+.acoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1d509f;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1a355e;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button:disabled {
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+.barra-vida {
+    height: 30px;
+    background-color: #4CAF50;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.barra-vida.vermelha {
+    background-color: red;
+  }
+
+.sprite {
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.spriteVilao {
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    transform: scaleX(-1);
+}
+
+.logHeroi {
+    color: blue
+}
+.logVilao {
+    color: purple
+}
+
+.logBatalha {
+    background-color: whitesmoke;
+    border: 2px solid #1d509f;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 200px;
+    width: 430px;
+}
+
+
+
